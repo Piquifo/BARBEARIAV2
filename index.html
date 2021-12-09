@@ -4,10 +4,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
     <title>Barbearia do Contoso 2.0</title>
 
     <!--STYLES-->
     <link rel="stylesheet" href="css/style.css">
+
+     <!-- Link Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
 
     <!--FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,9 +104,151 @@
                     </div>
                 </div>
             </div>
-        </section>        
+        </section>    
+        
+        <div class="line-right"></div>
+
+        <section class="section" id="depoimentos">
+            <div class="container">
+                <header>
+                    <h2>Depoimentos de quem passou por aqui!!!</h2>
+                </header>
+
+          <!-- Swiper -->
+    <div class="depoimentos swiper">
+        <div class="swiper-wrapper">
+
+          <div class="depoimento swiper-slide">
+              <blockquote>
+                  <p>
+                      <span>&ldquo;</span>
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta omnis tempora sint soluta porro excepturi, perferendis enim, reiciendis velit sequi laudantium deleniti numquam voluptate sed mollitia ipsum quisquam veritatis ex!
+                  </p>
+                  <cite>
+                      <img src="https://randomuser.me/api/portraits/women/28.jpg" alt="Foto de Lynn Walters">
+                      Lynn Walters
+                  </cite>
+              </blockquote>
+          </div>
+
+     <div class="depoimento swiper-slide"> 
+         <blockquote>
+            <p>
+                <span>&ldquo;</span>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta omnis tempora sint soluta porro excepturi, perferendis enim, reiciendis velit sequi laudantium deleniti numquam voluptate sed mollitia ipsum quisquam veritatis ex!
+            </p>
+            <cite>
+                <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Foto de Stacy Butler">
+                Stacy Butler
+            </cite>
+        </blockquote>
+    </div>
+
+          <div class="depoimento swiper-slide">
+            
+            <blockquote>
+                <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta omnis tempora sint soluta porro excepturi, perferendis enim, reiciendis velit sequi laudantium deleniti numquam voluptate sed mollitia ipsum quisquam veritatis ex!
+                </p>
+                <cite>
+                    <img src="https://randomuser.me/api/portraits/women/54.jpg" alt="Foto de Stacy Butler">
+                    Stacy Butler
+                </cite>
+            </blockquote>
+          </div>
+
+          <div class="depoimento swiper-slide">
+            <blockquote>
+                <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta omnis tempora sint soluta porro excepturi, perferendis enim, reiciendis velit sequi laudantium deleniti numquam voluptate sed mollitia ipsum quisquam veritatis ex!
+                </p>
+                <cite>
+                    <img src="https://randomuser.me/api/portraits/women/56.jpg" alt="Foto de Deanna Ford">
+                    Deanna Ford
+                </cite>
+            </blockquote>
+          </div>
+
+          <div class="depoimento swiper-slide">Slide 5</div>
+          <div class="depoimento swiper-slide">Slide 6</div>
+          <div class="depoimento swiper-slide">Slide 7</div>
+          <div class="depoimento swiper-slide">Slide 8</div>
+          <div class="depoimento swiper-slide">Slide 9</div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+
+            </div>
+        </section>
+
+
+        <div class="line-left"></div>
+
+        <section class="section" id="contato">
+            <div class="container grid">
+                <div class="text">
+                    <h2>Entre em contato com a gente!</h2>
+                    <p>Entre em contato com a Barbearia do Contoso, queremos tirar suas duvidas, ouvir suas criticas e sugestoes</p>
+
+                    <a class="button" target="_blank" href="https://api.whatsapp.com/send?phone=+5555999875845&text=Oi! Gostaria de agendar um horário!""><img src="img/whatsapp-logo-4.png" />Entre em Contato!!</a>
+                </div>
+            
+
+            <div class="links">
+                <ul class="grid">
+                    <li><img src="img/phone-call.png">55 9 9875845</li>
+                    <li><img src="img/map.png">Rua das ruas, 1234</li>
+                    <li><img src="img/email.png">contato@contoso.com</li>
+                </ul>
+            </div>
+        </div>
+        </section>
+
+        <div class="line-right"></div>
+
+
+
     </main>
 
+    <footer class="section">
+        <div class="container grid">
+            <div class="marca">
+                <a class="logo" href="#">Barbearia do <span>Contoso</span>.</a>
+                <p>©️2021 - Barbearia do Contoso™.</p>
+                <p>Todos os direitos reservados.</p>
+            </div>
+
+            <div class="social grid">
+             <a href="https://facebook.com">
+                 <img src="img/icons8-facebook-500.png" alt="">
+             </a>
+             <a href="https://www.youtube.com">
+                 <img src="img/icons8-reproduzir-youtube-500.png" alt="">
+             </a>
+             <a href="https://www.instagram.com">
+                 <img src="img/icons8-instagram-384.png" alt="">
+             </a>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <a href="#home" class="voltar-topo">
+        <img src="img/topo1.png" alt="">
+    </a>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script src="js/main.js"></script>
+
+     <!-- ScrollReveal js -->
+     <script src="https://unpkg.com/scrollreveal"></script>
+
+     <!-- main.js -->
+     <script src="js/main.js"></script>
 </body>
 </html>

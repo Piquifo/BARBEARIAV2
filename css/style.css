@@ -20,16 +20,30 @@ ul{
 
 /* VARIAVEIS */
 :root{
+ --header-height: 4.5rem;
+
 /* COR */
 --hue: 225;
 /* CORES NO HSL*/
 --cor-primaria: hsl(var(--hue) 92% 40%);
 --cor-secundaria:hsl(var(--hue) 63% 52%);
 --cor-alternativa:hsl(var(--hue) 40% 10%);
+--title-color: hsl(var(--hue)41% 10%);
+--text-color:hsl(0 0 46%);
+
+--title-size: 1.875rem;
+--subtitle-size: 1rem;
+}
+
+/*=======PADRAO=======*/
+
+html {
+    scroll-behavior: smooth;
 }
 
 body{
     font: 400 1rem 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
     /*color: ;
     background: ;
     */
@@ -41,8 +55,9 @@ body{
 }
 
 .title{
-    font: 700 1.875rem 'Poppins', sans-serif;
-     /*color: */
+    font: 700 var(--title-size) 'Poppins', sans-serif;
+    color: var(--title-color);
+    -webkit-font-smoothing: antialiased;
 }
 
 .button{
@@ -83,7 +98,7 @@ body{
 }
 
 .section {
-    padding: 5rem 0;
+    padding: calc(5rem + var(--header-height)) 0;
 }
 
 .section .title {
@@ -106,9 +121,13 @@ body{
     background-color: rgb(220, 220, 231);
 }
 
+#header .scroll {   
+    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.15);
+}
+
 /*============== LOGO ===============*/
 .logo {
-    font: 1.8rem 'Glory', sans-serif;
+    font: 1.4rem 'Glory', sans-serif;
     font-weight: bold;
     color:var(--cor-primaria);
 }
@@ -136,7 +155,7 @@ body{
     }
 
     nav ul li a:hover,
-    nav ul li a.action {
+    nav ul li a.active {
         color:red;
     }
 
@@ -152,7 +171,7 @@ body{
     }
 
     nav ul li a:hover::after,
-    nav ul li a.action::after{
+    nav ul li a.active::after{
         width: 100%;
     }
 
@@ -191,7 +210,9 @@ body{
 
 /*=== ABRE/FECHA MENU ===*/
 .toggle{
-    margin-top: 1rem;
+    color: var(--cor-primaria);
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 nav .icon-close{
@@ -313,3 +334,254 @@ nav.show div.icon-close{
     font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
+
+/*====  Depoimentos ============================ */
+
+#depoimentos {
+    background-color: #fff;
+}
+
+#depoimentos .container {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#depoimentos header {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    margin-bottom: 0;
+}
+
+#depoimentos blockquote {
+    padding: 2rem;
+    box-shadow: 0px 0px 18px red;
+    border-radius: 0.25rem;
+
+}
+
+#depoimentos blockquote p {
+    position: relative;
+    text-indent: 1.875rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+#depoimentos blockquote p span {
+    font: 700 2.5rem serif;
+    position: absolute;
+    top: -0.375rem;
+    left: -1.875rem;
+    color: var(--cor-primaria);
+}
+
+#depoimentos cite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#depoimentos cite img {
+    width: 10rem;
+    height: 10rem;
+    clip-path: circle();
+    margin-bottom: 1.5rem;
+}
+
+
+.swiper-slide {
+    height: auto;
+    padding: 4rem 1rem;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+/*Contato*/
+
+#contato .grid {
+    gap: 4rem;
+}
+ 
+#contato .text p {
+    margin-bottom: 2rem;
+}
+
+#contato ul li {
+    display: flex;
+    align-items: center;
+} 
+
+#contato ul.grid {
+    gap: 2rem;
+}
+
+#contato img {
+    width: 3rem;
+    margin-right: 5px;
+}
+
+footer {
+    background-color: var(--cor-secundaria);
+}
+
+footer .section {
+    padding: 4rem 0;
+}
+footer .logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+footer .marca p {
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+footer .social {
+    grid-auto-flow: column;
+    width: fit-content;
+}
+
+footer .social a {
+    transition: 0.3s;
+    display: inline-block;
+}
+
+footer .social a:hover {
+    transform: translate3d(5px, -10px, -1px);
+}
+
+.social a img {
+    width: 3rem;
+}
+
+.voltar-topo {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5rem;
+
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s;
+    transform: translateY(100%);
+}
+
+.voltar-topo .show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.voltar-topo img {
+    width: 3rem;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width:1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .section {
+        padding: 10rem 0;
+    }
+
+    .section header,
+    #depoimentos header {
+        max-width: 32rem;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .button {
+        height: 3.125rem;
+    }
+
+    nav .menu {
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+
+    nav .menu ul {
+        display: flex;
+        gap: 2rem;
+    }
+
+    nav .menu ul li a.title {
+        font: 400 1rem;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    nav .menu ul li a.title.active {
+        font-weight: bold;
+        -webkit-font-smoothing: auto;
+    }
+
+    nav .icon-menu {
+        display: none;
+    }
+
+    main {
+        margin-top: var(--header-height);
+    }
+
+    #home .container {
+        grid-auto-flow: column;
+        justify-content: space-between;
+        margin: 0 auto;
+    }
+
+    #home .image {
+        order: 1;
+    }
+
+    #home .text {
+        order: 0;
+        max-width: 24rem;
+        text-align: left;
+    }
+
+    #about .container {
+      margin: 0 auto;
+      grid-auto-flow: column;
+    }
+
+    .cards {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .card {
+      padding-left: 3rem;
+      padding-right: 3rem;
+    }
+
+    #depoimentos .container {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #contato .container {
+      grid-auto-flow: column;
+      align-items: center;
+    }
+
+    #contato .text {
+      max-width: 25rem;
+    }
+
+    footer .container {
+      grid-auto-flow: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+}
+
+
+
+
